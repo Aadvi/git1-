@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom right, #ff7f7f, #b30000);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background-color: #fff;
+            color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-container input, .form-container select, .form-container textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-container .radio-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .form-container .radio-group label {
+            flex: 1;
+            text-align: center;
+        }
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #b30000;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background-color: #ff6666;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Feedback Form</h2>
+        <form>
+            <label for="feedback-type">Feedback Type:</label>
+            <select id="feedback-type" name="feedback-type">
+                <option value="compliment">Compliment</option>
+                <option value="suggestion">Suggestion</option>
+                <option value="complaint">Complaint</option>
+            </select>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <label>Website Rating:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="rating" value="excellent"> Excellent</label>
+                <label><input type="radio" name="rating" value="good"> Good</label>
+                <label><input type="radio" name="rating" value="average"> Average</label>
+                <label><input type="radio" name="rating" value="poor"> Poor</label>
+            </div>
+
+            <label for="age">Age (10-100):</label>
+            <input type="number" id="age" name="age" min="10" max="100">
+
+            <label for="email">Email (optional):</label>
+            <input type="email" id="email" name="email">
+
+            <label for="website-url">Website URL (optional):</label>
+            <input type="url" id="website-url" name="website-url">
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
